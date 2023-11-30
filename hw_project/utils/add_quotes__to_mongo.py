@@ -1,5 +1,5 @@
 import json
-from bson.objectid import ObjectId
+# from bson.objectid import ObjectId
 
 from pymongo import MongoClient
 
@@ -17,5 +17,5 @@ for quote in quotes:
         db.quotes.insert_one({
             'quote': quote['quote'],
             'tags': quote['tags'],
-            'author': ObjectId(author['_id'])
+            'author': author['_id']
         })
